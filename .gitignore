@@ -10,6 +10,12 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.env
+.env.*
+!.env.example
+test-results/
+playwright-report/
+.responsive-test/
 *.local
 
 # Editor directories and files
