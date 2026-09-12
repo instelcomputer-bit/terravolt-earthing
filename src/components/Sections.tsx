@@ -39,14 +39,12 @@ export function Hero() {
         <div className="hero-copy">
           <p className="eyebrow">
             <span />
-            ENGINEERED TO PROTECT
+            EARTHING TRUSS™
           </p>
           <h1>
-            Advanced Earthing
-            <br className="desktop-break" /> Solutions for
-            <br className="desktop-break" /> <em>Safer Electrical</em>
-            <br className="desktop-break" /> Systems
-            <span className="gold">.</span>
+            Earthing Solutions
+            <br className="desktop-break" /> for a
+            <br className="desktop-break" /> <em>Safer Tomorrow</em>
           </h1>
           <p className="hero-description">
             Reliable earthing products and solutions designed to protect people,
@@ -54,10 +52,10 @@ export function Hero() {
           </p>
           <div className="button-row">
             <a className="button button-gold" href="#products">
-              Explore Products <Icon name="arrow" size={19} />
+              View Products <Icon name="arrow" size={19} />
             </a>
             <a className="button button-outline" href="#contact">
-              Get a Quote <Icon name="arrowUp" size={18} />
+              Enquire Now <Icon name="arrowUp" size={18} />
             </a>
           </div>
           <div className="hero-assurance">
@@ -111,33 +109,28 @@ export function WhyEarthing() {
   const benefits: [IconName, string, string][] = [
     [
       "shield",
-      "Fault & lightning protection",
+      "Protects from lightning & electrical faults",
       "A considered path to earth for fault and lightning currents.",
     ],
     [
       "ground",
-      "Reduced earth resistance",
+      "Reduces earth resistance",
       "A grounding approach matched to your site and soil conditions.",
     ],
     [
       "bolt",
-      "Equipment protection",
+      "Prevents equipment damage",
       "Bonding and earthing that support sensitive electrical systems.",
     ],
     [
       "target",
-      "System reliability",
+      "Increases system reliability",
       "A dependable foundation for safe, consistent operation.",
     ],
     [
       "layers",
-      "Long service life",
-      "Compatible materials selected for the installation environment.",
-    ],
-    [
-      "check",
-      "Simpler maintenance",
-      "Accessible connections for periodic inspection and testing.",
+      "Long life & low maintenance",
+      "Suitable materials and accessible connections support lasting protection and routine maintenance.",
     ],
   ];
   return (
@@ -146,7 +139,7 @@ export function WhyEarthing() {
         <div>
           <SectionHeading
             eyebrow="THE IMPORTANCE OF EARTHING"
-            title="Safety starts beneath the surface."
+            title="Why Earthing?"
             text="Every reliable electrical system needs a strong foundation. The right earthing solution helps protect what matters most — from the ground up."
           />
           <a href="#solutions" className="text-link">
@@ -179,7 +172,7 @@ const industries: [IconName, string, string][] = [
   ["bolt", "Power Plants", "Confidence at every connection."],
   [
     "building",
-    "Buildings & Commercial Projects",
+    "Buildings & Towers",
     "Built into a safer foundation.",
   ],
   ["sun", "Solar & Wind Energy", "Grounding a cleaner future."],
@@ -193,11 +186,11 @@ export function Applications() {
         <div className="section-title-row">
           <SectionHeading
             eyebrow="WHERE WE MAKE A DIFFERENCE"
-            title="Different industries. One commitment."
+            title="Applications"
           />
           <p className="section-aside">
-            From everyday spaces to critical infrastructure, protection belongs
-            everywhere.
+            Earthing solutions for industrial units, energy infrastructure,
+            buildings and everyday spaces.
           </p>
         </div>
         <div className="industry-grid">
@@ -269,7 +262,7 @@ export function Solutions() {
         <div>
           <SectionHeading
             eyebrow="COMPLETE PROTECTION"
-            title="Connected solutions. Lasting confidence."
+            title="Right Earthing, Right Protection"
             text="The right components. A coordinated approach. Explore grounding solutions for your application."
           />
           <div className="solution-visual">
@@ -339,9 +332,9 @@ export function QualitySection() {
             NO COMPROMISE ON THE FOUNDATION
           </p>
           <h2>
-            Small details.
+            Strong Grounding
             <br />
-            <span className="muted">Long-term protection.</span>
+            <span className="muted">for a Better Tomorrow</span>
           </h2>
           <p>
             Quality starts with the materials and continues through every
@@ -354,7 +347,7 @@ export function QualitySection() {
             "Quality materials",
             "Reliable performance",
             "Durable construction",
-            "Project-specific professional standards",
+            "Electrical safety",
             "Long-term protection",
           ].map((item) => (
             <li key={item}>
@@ -377,11 +370,11 @@ export function CTA() {
             BUILD ON A SAFER FOUNDATION
           </p>
           <h2>
-            Protect your people.
+            Protect Your People.
             <br />
-            Protect your equipment.
+            Protect Your Equipment.
             <br />
-            <span className="gold">Protect your future.</span>
+            <span className="gold">Protect Your Future.</span>
           </h2>
         </div>
         <div className="cta-action">
@@ -394,10 +387,10 @@ export function CTA() {
             Let’s find the right grounding solution.
           </p>
           <a className="button button-gold" href="#contact">
-            Talk to Our Experts <Icon name="arrowUp" size={19} />
+            Enquire Now <Icon name="arrowUp" size={19} />
           </a>
           <a className="text-link" href="#contact">
-            Request a Quote <Icon name="arrow" size={16} />
+            Contact Us <Icon name="arrow" size={16} />
           </a>
         </div>
       </div>

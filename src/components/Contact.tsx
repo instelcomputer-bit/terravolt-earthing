@@ -16,7 +16,7 @@ export function Contact({
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const text = `PROJECT ENQUIRY — TERRAVOLT\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone") || "Not provided"}\nCompany: ${data.get("company") || "Not provided"}\nInterested in: ${enquiry}\n\nProject requirements:\n${data.get("message")}`;
+    const text = `PROJECT ENQUIRY — EARTHING TRUSS™\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone") || "Not provided"}\nCompany: ${data.get("company") || "Not provided"}\nInterested in: ${enquiry}\n\nProject requirements:\n${data.get("message")}`;
     setSummary(text);
     setSummaryProduct(enquiry);
   }
@@ -26,7 +26,7 @@ export function Contact({
     );
     const link = document.createElement("a");
     link.href = url;
-    link.download = "terravolt-project-enquiry.txt";
+    link.download = "earthing-truss-project-enquiry.txt";
     link.click();
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
@@ -36,7 +36,7 @@ export function Contact({
         <div>
           <SectionHeading
             eyebrow="LET’S TALK"
-            title="Your project. Our next conversation."
+            title="Contact Us"
             text="Tell us what you’re building. Start with a product, a drawing or a simple question — and take the next step toward a safer system."
           />
           <div className="contact-cards">
@@ -54,7 +54,7 @@ export function Contact({
           </div>
           <p className="contact-placeholder">
             <span className="status-dot" />
-            Demo contact details — replace before launch.
+            Call us to discuss your earthing products and project requirements.
           </p>
         </div>
         <div className="contact-form-card">
@@ -141,8 +141,8 @@ export function Contact({
               />
             </label>
             <p className="form-note">
-              Demo mode: your details stay in this browser. Prepare and download
-              an enquiry; nothing is sent or stored.
+              Prepare and download your enquiry, or call us directly. This form
+              does not send your details.
             </p>
             <button className="button button-gold form-submit" type="submit">
               Prepare Enquiry <Icon name="arrowUp" size={18} />
@@ -154,8 +154,8 @@ export function Contact({
                     <Icon name="check" size={18} /> Your enquiry is ready
                   </h4>
                   <p>
-                    No message has been sent. Download your enquiry to keep or
-                    share once business contact details are available.
+                    No message has been sent. Download your enquiry for reference
+                    when discussing your requirements with us.
                   </p>
                   <button
                     type="button"

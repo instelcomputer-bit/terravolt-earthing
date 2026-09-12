@@ -29,6 +29,52 @@ body {
   margin: 0;
   min-width: 320px;
 }
+.whatsapp-float {
+  animation: whatsapp-pulse 1.6s ease-in-out infinite;
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #128c45;
+  color: #fff;
+  box-shadow: 0 4px 18px #0006;
+}
+.whatsapp-float:hover {
+  background: #0d7037;
+}
+.whatsapp-number {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #123963;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+@keyframes whatsapp-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+.whatsapp-float:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
 button,
 input,
 select,
@@ -121,7 +167,7 @@ section[id] {
   color: var(--muted);
 }
 .small {
-  font-size: 12px !important;
+  font-size: 14px !important;
   line-height: 1.8 !important;
   color: var(--muted);
 }
@@ -147,7 +193,7 @@ section[id] {
   padding: 14px 23px;
   border: 1px solid transparent;
   border-radius: 4px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 750;
   line-height: 1.5;
 }
@@ -180,7 +226,7 @@ section[id] {
   align-items: center;
   gap: 10px;
   color: var(--gold);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 2px;
   font-weight: 700;
   line-height: 1.6;
@@ -200,7 +246,7 @@ section[id] {
   max-width: 600px;
 }
 .section-description {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.9;
   margin-top: 23px;
@@ -218,7 +264,7 @@ section[id] {
 }
 .section-aside {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
   max-width: 300px;
   padding-bottom: 4px;
@@ -228,7 +274,7 @@ section[id] {
   align-items: center;
   gap: 15px;
   color: var(--gold);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   min-height: 44px;
 }
@@ -263,7 +309,7 @@ section[id] {
   gap: 11px;
   align-items: center;
   flex-shrink: 0;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: 0.8px;
   line-height: 1.1;
@@ -283,7 +329,7 @@ section[id] {
 }
 .logo small {
   display: block;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 3.2px;
   margin-top: 7px;
@@ -293,7 +339,7 @@ section[id] {
   display: flex;
   align-items: center;
   gap: 26px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 .navigation > a:not(.button) {
@@ -307,7 +353,7 @@ section[id] {
   gap: 17px;
   min-height: 43px;
   padding: 11px 17px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .menu-toggle {
   display: none;
@@ -374,12 +420,12 @@ section[id] {
 .hero .eyebrow {
   margin-bottom: 25px;
   letter-spacing: 2.5px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .hero-description {
   margin: 25px 0 29px;
   max-width: 425px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.9;
   color: #b5babb;
 }
@@ -388,7 +434,7 @@ section[id] {
   align-items: center;
   gap: 9px;
   color: #a1a8a9;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 27px;
 }
 .hero-assurance svg {
@@ -412,7 +458,7 @@ section[id] {
   border-left: 2px solid var(--gold);
   background: #101719c9;
   padding: 15px 20px;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 1.8;
   letter-spacing: 1.8px;
   color: #b9c1c2;
@@ -430,7 +476,7 @@ section[id] {
   right: max(56px, calc((100vw - 1280px) / 2));
   bottom: 24px;
   letter-spacing: 1.8px;
-  font-size: 8px;
+  font-size: 10px;
   color: #939b9d;
 }
 .features {
@@ -466,13 +512,13 @@ section[id] {
   flex-shrink: 0;
 }
 .feature h2 {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 7px;
 }
 .feature p {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
   line-height: 1.6;
 }
@@ -480,7 +526,7 @@ section[id] {
   position: absolute;
   top: 2px;
   right: 16px;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1px;
   color: #929a9c;
 }
@@ -509,7 +555,7 @@ section[id] {
   color: var(--gold);
 }
 .why-note p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -531,12 +577,12 @@ section[id] {
   margin-bottom: 14px;
 }
 .benefit h3 {
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 9px;
 }
 .benefit p {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   max-width: 260px;
 }
@@ -560,7 +606,7 @@ section[id] {
   gap: 9px;
 }
 .product-filters button {
-  font-size: 11px;
+  font-size: 13px;
   min-height: 41px;
   background: #ffffff03;
   border: 1px solid #ffffff13;
@@ -582,13 +628,13 @@ section[id] {
   color: #f4f4f0;
 }
 .product-filters button span {
-  font-size: 9px;
+  font-size: 11px;
   background: #ecc34b20;
   padding: 2px 4px;
   border-radius: 2px;
 }
 .product-count {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 1.7px;
   color: var(--muted);
   white-space: nowrap;
@@ -632,7 +678,7 @@ section[id] {
   z-index: 1;
   left: 15px;
   top: 13px;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.5px;
   color: #babdbb;
 }
@@ -661,19 +707,19 @@ section[id] {
 }
 .product-info .product-category {
   color: #c6a375;
-  font-size: 8px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
   margin-bottom: 9px;
 }
 .product-info h3 {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   margin-bottom: 8px;
   letter-spacing: -0.25px;
 }
 .product-info > p:not(.product-category) {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.8;
   color: var(--muted);
   margin-bottom: 21px;
@@ -685,27 +731,27 @@ section[id] {
   gap: 10px;
   margin-top: auto;
 }
-.product-actions button {
+.product-actions :is(button, a) {
   display: flex;
   align-items: center;
   gap: 8px;
   background: none;
   min-height: 48px;
   padding: 5px 0;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   color: #b6bcbc;
 }
-.product-actions button:last-child {
+.product-actions :is(button, a):last-child {
   color: var(--gold);
 }
-.product-actions button:hover {
+.product-actions :is(button, a):hover {
   color: #fff;
 }
 .product-footnote {
   text-align: center;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
   margin-top: 35px;
   line-height: 1.8;
 }
@@ -744,17 +790,17 @@ section[id] {
   margin-bottom: 28px;
 }
 .industry-top > span {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 2px;
   color: #727b7e;
 }
 .industry-card h3 {
-  font-size: 15px;
+  font-size: 17px;
   padding-right: 23px;
   line-height: 1.5;
 }
 .industry-card p {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--muted);
   margin-top: 8px;
   line-height: 1.7;
@@ -801,7 +847,7 @@ section[id] {
   gap: 13px;
   padding: 17px 20px;
   background: linear-gradient(transparent, #0c0f10dd);
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.6px;
   color: #e1e2de;
 }
@@ -822,12 +868,12 @@ section[id] {
   width: 100%;
   background: transparent;
   min-height: 70px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 19px 0;
   font-weight: 550;
 }
 .solution-number {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 1px;
   color: #929a9c;
 }
@@ -844,25 +890,25 @@ section[id] {
   padding: 0 24px 26px 37px;
 }
 .solution-body h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 .solution-body p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
   color: var(--muted);
 }
 .solution-body small {
   display: block;
-  font-size: 9px;
+  font-size: 11px;
   color: #c5a477;
   line-height: 1.8;
   margin-top: 17px;
 }
 .solution-body .text-link {
   margin-top: 11px;
-  font-size: 11px;
+  font-size: 13px;
 }
 /* Quality and call to action */
 .quality-section {
@@ -890,7 +936,7 @@ section[id] {
   border-radius: 50% 50% 42% 42%;
 }
 .quality-emblem span {
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 1.6px;
 }
 .quality-layout h2 {
@@ -899,12 +945,12 @@ section[id] {
   letter-spacing: -1px;
 }
 .quality-layout .eyebrow {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.7px;
   margin-bottom: 14px;
 }
 .quality-layout p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.9;
   max-width: 490px;
@@ -922,7 +968,7 @@ section[id] {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
   color: #c5cbca;
 }
@@ -952,7 +998,7 @@ section[id] {
   padding-right: 30px;
 }
 .cta-action p {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
   color: var(--muted);
   margin-bottom: 22px;
@@ -1004,11 +1050,11 @@ section[id] {
   min-width: 0;
 }
 .contact-card h3 {
-  font-size: 11px;
+  font-size: 13px;
   margin: 3px 0 7px;
 }
 .contact-card p {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--muted);
   line-height: 1.8;
   overflow-wrap: anywhere;
@@ -1018,7 +1064,7 @@ section[id] {
   align-items: center;
   gap: 9px;
   color: #a2a7a8;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 27px;
   line-height: 1.8;
 }
@@ -1035,11 +1081,11 @@ section[id] {
   border-radius: 5px;
 }
 .form-heading h3 {
-  font-size: 19px;
+  font-size: 21px;
   letter-spacing: -0.5px;
 }
 .form-heading p {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--muted);
   margin-top: 9px;
 }
@@ -1053,7 +1099,7 @@ section[id] {
 }
 form label {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   color: #c9cecd;
   margin-bottom: 19px;
@@ -1073,7 +1119,7 @@ textarea {
   border-radius: 3px;
   padding: 12px 13px;
   margin-top: 9px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   min-height: 44px;
 }
@@ -1099,7 +1145,7 @@ select:focus {
 }
 .form-note {
   color: #969f9f;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.8;
   margin-bottom: 19px;
 }
@@ -1118,17 +1164,17 @@ select:focus {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--gold);
 }
 .enquiry-result p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   color: var(--muted);
   margin: 12px 0;
 }
 .enquiry-result .button {
-  font-size: 11px;
+  font-size: 13px;
   gap: 15px;
 }
 /* Footer */
@@ -1144,10 +1190,10 @@ select:focus {
   padding-bottom: 48px;
 }
 .footer-brand .logo {
-  font-size: 19px;
+  font-size: 21px;
 }
 .footer-brand .logo small {
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 2.8px;
 }
 .footer-brand .logo-mark {
@@ -1156,7 +1202,7 @@ select:focus {
 }
 .footer-brand > p {
   color: #939b9d;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.9;
   margin-top: 21px;
   max-width: 230px;
@@ -1165,7 +1211,7 @@ select:focus {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 1.4px;
   color: #c3c7c5;
   margin-top: 24px;
@@ -1175,14 +1221,14 @@ select:focus {
   height: 4px;
 }
 .footer-grid h3 {
-  font-size: 11px;
+  font-size: 13px;
   margin: 5px 0 16px;
 }
 .footer-grid > div:not(.footer-brand) > a {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 10px;
+  font-size: 12px;
   min-height: 31px;
   color: #939b9d;
   line-height: 1.7;
@@ -1191,7 +1237,7 @@ select:focus {
   color: var(--gold);
 }
 .footer-grid .small {
-  font-size: 10px !important;
+  font-size: 12px !important;
   margin-top: 8px;
 }
 .footer-bottom {
@@ -1201,7 +1247,7 @@ select:focus {
   gap: 25px;
   border-top: 1px solid var(--line);
   padding: 23px 0;
-  font-size: 9px;
+  font-size: 11px;
   color: #7f898b;
   line-height: 1.8;
 }
@@ -1209,7 +1255,7 @@ select:focus {
   display: flex;
   align-items: center;
   gap: 13px;
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 1.6px;
 }
 .footer-bottom > span svg {
@@ -1270,18 +1316,18 @@ select:focus {
 }
 .dialog-copy > p:not(.eyebrow) {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
 }
 .dialog-copy dl {
-  font-size: 12px;
+  font-size: 14px;
   border-block: 1px solid var(--line);
   padding-block: 15px;
   line-height: 1.8;
 }
 .dialog-copy dt {
   color: var(--gold);
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 10px;
 }
 .dialog-copy dt:first-child {
@@ -1293,7 +1339,7 @@ select:focus {
 }
 .dialog-copy > .button {
   margin-top: 23px;
-  font-size: 11px;
+  font-size: 13px;
   gap: 12px;
   width: 100%;
 }
@@ -1344,7 +1390,7 @@ select:focus {
     width: 40px;
   }
   .feature p {
-    font-size: 9px;
+    font-size: 11px;
   }
   .feature-number {
     right: 7px;
@@ -1356,7 +1402,7 @@ select:focus {
     padding-inline: 14px;
   }
   .product-info h3 {
-    font-size: 13px;
+    font-size: 15px;
   }
   .solutions-layout,
   .contact-layout {
@@ -1457,10 +1503,10 @@ select:focus {
     right: 20px;
   }
   .feature p {
-    font-size: 11px;
+    font-size: 13px;
   }
   .feature h2 {
-    font-size: 13px;
+    font-size: 15px;
   }
   .feature-icon {
     width: 46px;
@@ -1491,10 +1537,10 @@ select:focus {
     padding: 22px;
   }
   .industry-card h3 {
-    font-size: 13px;
+    font-size: 15px;
   }
   .industry-card p {
-    font-size: 10px;
+    font-size: 12px;
     max-width: 160px;
   }
   .industry-arrow {
@@ -1505,7 +1551,7 @@ select:focus {
     gap: 35px;
   }
   .solution h3 button {
-    font-size: 12px;
+    font-size: 14px;
     gap: 12px;
   }
   .solution-body {
@@ -1569,14 +1615,14 @@ select:focus {
     height: 70px;
   }
   .logo {
-    font-size: 20px;
+    font-size: 22px;
   }
   .logo-mark {
     width: 39px;
     height: 39px;
   }
   .logo small {
-    font-size: 7px;
+    font-size: 9px;
     letter-spacing: 2.9px;
   }
   .navigation {
@@ -1598,7 +1644,7 @@ select:focus {
     line-height: 1.13;
   }
   .hero .eyebrow {
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 2px;
     margin-bottom: 22px;
   }
@@ -1622,22 +1668,22 @@ select:focus {
   }
   .hero-description {
     max-width: 390px;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.85;
     margin-block: 21px 25px;
   }
   .hero-assurance {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 22px;
   }
   .hero-caption {
     right: 20px;
     bottom: 27px;
     padding: 12px 16px;
-    font-size: 7px;
+    font-size: 9px;
   }
   .button {
-    font-size: 12px;
+    font-size: 14px;
     gap: 19px;
     padding-inline: 19px;
   }
@@ -1658,15 +1704,15 @@ select:focus {
     width: 25px;
   }
   .feature h2 {
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 1.6px;
   }
   .feature p {
-    font-size: 9px;
+    font-size: 11px;
     max-width: 130px;
   }
   .feature-number {
-    font-size: 7px;
+    font-size: 9px;
     right: 10px;
     top: 8px;
   }
@@ -1675,12 +1721,12 @@ select:focus {
     letter-spacing: -1.1px;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 1.6px;
     margin-bottom: 15px;
   }
   .section-description {
-    font-size: 13px;
+    font-size: 15px;
     max-width: none;
     margin-top: 18px;
   }
@@ -1701,11 +1747,11 @@ select:focus {
     gap: 25px 22px;
   }
   .benefit h3 {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.6;
   }
   .benefit p {
-    font-size: 11px;
+    font-size: 13px;
   }
   .benefit {
     padding-bottom: 18px;
@@ -1717,7 +1763,7 @@ select:focus {
   .section-aside {
     max-width: none;
     margin-top: 17px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1731,7 +1777,7 @@ select:focus {
     gap: 8px;
   }
   .product-filters button {
-    font-size: 10px;
+    font-size: 12px;
     min-height: 44px;
     padding: 10px 12px;
   }
@@ -1739,17 +1785,17 @@ select:focus {
     padding: 16px 13px 0;
   }
   .product-info h3 {
-    font-size: 13px;
+    font-size: 15px;
   }
   .product-info .product-category {
-    font-size: 7px;
+    font-size: 9px;
     letter-spacing: 1px;
   }
   .product-info > p:not(.product-category) {
-    font-size: 10px;
+    font-size: 12px;
   }
   .product-code {
-    font-size: 7px;
+    font-size: 9px;
     left: 12px;
     top: 10px;
   }
@@ -1757,13 +1803,13 @@ select:focus {
     width: 32px;
     height: 32px;
   }
-  .product-actions button {
-    font-size: 9px;
+  .product-actions :is(button, a) {
+    font-size: 11px;
     gap: 4px;
     min-height: 46px;
   }
   .product-footnote {
-    font-size: 10px;
+    font-size: 12px;
     text-align: left;
     margin-top: 23px;
   }
@@ -1782,7 +1828,7 @@ select:focus {
     margin-bottom: 24px;
   }
   .industry-card h3 {
-    font-size: 13px;
+    font-size: 15px;
   }
   .industry-card p {
     padding-right: 10px;
@@ -1799,7 +1845,7 @@ select:focus {
     margin-top: 25px;
   }
   .solution h3 button {
-    font-size: 13px;
+    font-size: 15px;
     min-height: 68px;
   }
   .solution-body {
@@ -1820,12 +1866,12 @@ select:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .quality-list li {
-    font-size: 11px;
+    font-size: 13px;
     align-items: flex-start;
     gap: 8px;
   }
   .quality-layout .eyebrow {
-    font-size: 7px;
+    font-size: 9px;
     letter-spacing: 1.2px;
   }
   .quality-layout h2 {
@@ -1845,7 +1891,7 @@ select:focus {
     margin-top: 30px;
   }
   .cta-action p {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 20px;
   }
   .cta-action > .text-link {
@@ -1868,10 +1914,10 @@ select:focus {
     height: 35px;
   }
   .contact-card p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .contact-placeholder {
-    font-size: 9px;
+    font-size: 11px;
   }
   .form-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1894,15 +1940,15 @@ select:focus {
     grid-column: auto;
   }
   .footer-grid h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
   .footer-grid > div:not(.footer-brand) > a {
-    font-size: 11px;
+    font-size: 13px;
     min-height: 36px;
   }
   .footer-bottom {
     align-items: flex-start;
-    font-size: 8px;
+    font-size: 10px;
     gap: 15px;
     padding-block: 19px;
   }
@@ -1923,7 +1969,7 @@ select:focus {
     padding: 25px;
   }
   .dialog-copy h2 {
-    font-size: 25px;
+    font-size: 27px;
   }
   .dialog-copy .eyebrow {
     margin-bottom: 10px;
@@ -1944,31 +1990,31 @@ select:focus {
     padding-top: 39px;
   }
   .hero .eyebrow {
-    font-size: 8px;
+    font-size: 10px;
   }
   .hero-description {
-    font-size: 12px;
+    font-size: 14px;
   }
   .button-row {
     gap: 9px;
   }
   .button-row .button {
-    font-size: 10px;
+    font-size: 12px;
     gap: 11px;
     padding-inline: 14px;
   }
   .hero-assurance {
-    font-size: 9px;
+    font-size: 11px;
   }
   .feature {
     padding-inline: 3px !important;
     gap: 6px;
   }
   .feature h2 {
-    font-size: 10px;
+    font-size: 12px;
   }
   .feature p {
-    font-size: 8px;
+    font-size: 10px;
   }
   .section-heading h2 {
     font-size: 29px;
@@ -1981,16 +2027,16 @@ select:focus {
     object-fit: contain;
   }
   .product-info h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .product-info > p:not(.product-category) {
-    font-size: 12px;
+    font-size: 14px;
   }
   .product-info .product-category {
-    font-size: 8px;
+    font-size: 10px;
   }
-  .product-actions button {
-    font-size: 11px;
+  .product-actions :is(button, a) {
+    font-size: 13px;
   }
   .product-info {
     padding: 20px 20px 0;
@@ -2001,7 +2047,7 @@ select:focus {
     width: 100%;
   }
   .product-filters button {
-    font-size: 9px;
+    font-size: 11px;
     padding-inline: 7px;
     gap: 5px;
   }
@@ -2009,10 +2055,10 @@ select:focus {
     padding: 18px 12px;
   }
   .industry-card h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
   .industry-card p {
-    font-size: 9px;
+    font-size: 11px;
   }
   .industry-arrow {
     width: 15px;
@@ -2028,7 +2074,7 @@ select:focus {
     padding: 21px;
   }
   .form-heading h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .quality-list {
     grid-template-columns: 1fr;
@@ -2067,7 +2113,7 @@ select:focus {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 9px;
+  font-size: 11px;
   border: 1px solid var(--line);
   border-radius: 3px;
   padding: 9px 7px;
@@ -2089,30 +2135,30 @@ select:focus {
   .form-heading p,
   .solution-body p,
   .quality-layout p:not(.eyebrow) {
-    font-size: 12px;
+    font-size: 14px;
   }
   .product-info h3,
   .benefit h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
   .product-info .product-category {
-    font-size: 8px;
-  }
-  .product-actions button {
     font-size: 10px;
+  }
+  .product-actions :is(button, a) {
+    font-size: 12px;
   }
   form label,
   .form-note,
   .contact-placeholder {
-    font-size: 11px;
+    font-size: 13px;
   }
   input,
   select,
   textarea {
-    font-size: 16px;
+    font-size: 18px;
   }
   .footer-grid > div:not(.footer-brand) > a {
-    font-size: 12px;
+    font-size: 14px;
     min-height: 44px;
   }
   .product-expand {
@@ -2124,9 +2170,49 @@ select:focus {
   }
 }
 .footer-contact {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
   line-height: 1.9;
   overflow-wrap: anywhere;
   margin-top: 8px;
+}
+
+/* Product catalogue additions retain the existing card sizing and palette. */
+.product-image img.product-photo {
+  object-fit: contain;
+  background: #fff;
+}
+.dialog-inner > img.product-photo {
+  object-fit: contain;
+  background: #fff;
+  max-height: 440px;
+}
+.product-enquiry {
+  padding-bottom: 12px;
+}
+.product-enquiry button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  padding: 0;
+  font-size: 12px;
+  color: var(--muted);
+  min-height: 44px;
+}
+.dialog-copy h3 {
+  font-size: 16px;
+  margin-top: 20px;
+}
+.product-features {
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.dialog-copy .small a {
+  text-decoration: underline;
+}
+.product-actions {
+  flex-wrap: wrap;
 }

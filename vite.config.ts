@@ -19,6 +19,9 @@ export default defineConfig(({ mode }) => {
     );
   }
   return {
+    server: {
+      allowedHosts: ["overplay-revenue-gizmo.ngrok-free.dev"],
+    },
     plugins: [
       react(),
       {

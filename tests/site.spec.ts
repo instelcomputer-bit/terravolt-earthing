@@ -88,7 +88,7 @@ test("product filtering, modal focus, enquiry and download", async ({
     .click();
   await expect(page.locator(".product-card")).toHaveCount(2);
   const details = page
-    .getByRole("button", { name: "View Details", exact: true })
+    .getByRole("button", { name: "Details", exact: true })
     .first();
   await details.click();
   await expect(page.getByRole("dialog")).toBeVisible();
@@ -118,7 +118,7 @@ test("product filtering, modal focus, enquiry and download", async ({
   const downloaded = page.waitForEvent("download");
   await page.getByRole("button", { name: "Download enquiry" }).click();
   const download = await downloaded;
-  expect(download.suggestedFilename()).toBe("terravolt-project-enquiry.txt");
+  expect(download.suggestedFilename()).toBe("earthing-truss-project-enquiry.txt");
   const stream = await download.createReadStream();
   const chunks = [];
   for await (const chunk of stream!) chunks.push(chunk);
@@ -126,7 +126,10 @@ test("product filtering, modal focus, enquiry and download", async ({
   expect(contents).toContain("Interested in: Copper Strip");
   expect(contents).toContain("Test Customer");
   await page
-    .getByRole("button", { name: "Enquire about GI Strip", exact: true })
+    .getByRole("button", { name: "View GI Strip details", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Enquire About This Product" })
     .click();
   await expect(page.getByLabel("I’m interested in")).toHaveValue("GI Strip");
   await expect(page.getByText("Your enquiry is ready")).not.toBeVisible();
@@ -152,7 +155,7 @@ test("WCAG accessibility on desktop and mobile, including dialog", async ({
       ).violations,
     ).toEqual([]);
     await page
-      .getByRole("button", { name: "View Details", exact: true })
+      .getByRole("button", { name: "Details", exact: true })
       .first()
       .click();
     expect(

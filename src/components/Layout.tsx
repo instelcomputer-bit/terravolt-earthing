@@ -1,6 +1,6 @@
 ﻿import { useEffect, useRef, useState } from "react";
 import { Icon } from "./Icon";
-import { contactDetails, socialProfiles } from "../site";
+import { contactDetails } from "../site";
 const navigation = [
   ["Home", "#home"],
   ["About", "#about"],
@@ -14,13 +14,13 @@ export function Logo() {
     <a
       className="logo"
       href="#home"
-      aria-label="TerraVolt Earthing Solutions home"
+      aria-label="Earthing Truss™ home"
     >
       <span className="logo-mark">
         <Icon name="ground" size={29} />
       </span>
       <span>
-        TERRA<span className="gold">VOLT</span>
+        Earthing <span className="gold">Truss™</span>
         <small>EARTHING SOLUTIONS</small>
       </span>
     </a>
@@ -90,7 +90,7 @@ export function Navbar() {
             href="#contact"
             onClick={() => setOpen(false)}
           >
-            Get a Quote <Icon name="arrowUp" size={17} />
+            Enquire Now <Icon name="arrowUp" size={17} />
           </a>
         </nav>
       </div>
@@ -105,11 +105,10 @@ export function Footer() {
           <div className="footer-brand">
             <Logo />
             <p>
-              A stronger connection to earth.
-              <br />A safer foundation for everything above it.
+              Earthing Solutions for a Safer Tomorrow
             </p>
             <span className="footer-tag">
-              <span className="status-dot" /> GROUNDED IN PROTECTION
+              <span className="status-dot" /> Earthing Today, Safer Tomorrow
             </span>
           </div>
           <div>
@@ -134,52 +133,25 @@ export function Footer() {
             <a href="#solutions">Electrical earthing</a>
             <a href="#solutions">Lightning protection</a>
             <a href="#solutions">Solar & telecom</a>
-            <a href="#solutions">Industrial grounding</a>
+            <a href="#solutions">Industrial</a>
+            <a href="#solutions">Commercial</a>
+            <a href="#solutions">Residential</a>
           </div>
           <div>
             <h3>Let’s connect</h3>
             <a href="#contact">
               Start a project enquiry <Icon name="arrowUp" size={14} />
             </a>
-            <p className="footer-contact">
-              {contactDetails[0].value}
-              <br />
-              {contactDetails[2].value}
-            </p>
-            <p className="small">
-              Business contact details and social profiles will be added before
-              launch.
-            </p>
-            <div className="social-links">
-              {socialProfiles.map((profile) =>
-                profile.url ? (
-                  <a
-                    key={profile.name}
-                    href={profile.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${profile.name} (opens in a new tab)`}
-                  >
-                    {profile.name}
-                    <Icon name="arrowUp" size={13} />
-                  </a>
-                ) : (
-                  <span
-                    key={profile.name}
-                    aria-disabled="true"
-                    title="Business profile coming soon"
-                  >
-                    {profile.name}
-                    <Icon name="arrowUp" size={13} />
-                  </span>
-                ),
-              )}
-            </div>
+            {contactDetails.map(({ title, value, href }) => (
+              <a className="footer-contact" key={value} href={href}>
+                {title}: {value}
+              </a>
+            ))}
           </div>
         </div>
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} TerraVolt Earthing Solutions. All
+            Since 2015 · © {new Date().getFullYear()} Earthing Truss™. All
             rights reserved.
           </p>
           <span>

@@ -1,0 +1,380 @@
+/* Navy and copper theme, shared by the catalogue, contact form and dialogs. */
+:root {
+  --navy: #0b1f33;
+  --copper: #c47a44;
+  --copper-text: #95552b;
+  --light-gray: #f4f6f7;
+  --white: #ffffff;
+  color: #0b1f33;
+  background: #ffffff;
+  color-scheme: light;
+  --gold: var(--copper-text);
+  --muted: #53616d;
+  --line: #dde2e5;
+  --panel: #f4f6f7;
+  --background: #ffffff;
+}
+::selection {
+  background: #95552b;
+  color: #fff;
+}
+.header {
+  background: #fffffff5;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 3px 24px #0b1f3308;
+}
+.logo small {
+  color: #53616d;
+}
+.logo-mark,
+.feature-icon,
+.contact-card > span {
+  background: #f5e9df;
+  border-color: #e5cbb7;
+  border-radius: 10px;
+}
+.button {
+  border-radius: 8px;
+}
+.button-gold,
+.skip-link {
+  background: var(--copper);
+  color: var(--navy);
+}
+.button-gold {
+  box-shadow: 0 6px 18px #0b1f331a;
+}
+.button-gold:hover {
+  background: #e0a77d;
+  color: var(--navy);
+}
+.button-outline {
+  background: #ffffff0d;
+  border-color: #ffffff70;
+  color: #fff;
+}
+.button-outline:hover {
+  background: #ffffff20;
+  color: #fff;
+  border-color: #fff;
+}
+.text-link:hover {
+  color: #0b1f33;
+}
+.status-dot {
+  box-shadow: 0 0 12px #c47a4433;
+}
+.hero,
+.cta-section,
+.footer {
+  --gold: var(--copper);
+  --muted: #c6cdd3;
+  --line: #ffffff24;
+  color: #fff;
+  background: #0b1f33;
+}
+.hero-shade {
+  background:
+    linear-gradient(
+      90deg,
+      #0b1f33 0%,
+      #0b1f33f2 24%,
+      #0b1f33a6 46%,
+      #0b1f3326 74%
+    ),
+    linear-gradient(0deg, #0b1f33, transparent 35%);
+}
+.hero-description,
+.hero-assurance {
+  color: #d6dce1;
+}
+.hero-caption {
+  background: #0b1f33e6;
+  color: #d6dce1;
+  border-radius: 8px;
+}
+.hero-coordinate {
+  color: #c6cdd3;
+}
+.hero .button-gold,
+.cta-section .button-gold {
+  background: var(--copper);
+  color: #0b1f33;
+}
+.hero .button-gold:hover,
+.cta-section .button-gold:hover {
+  background: #e0a77d;
+  color: #0b1f33;
+}
+.hero a:hover,
+.cta-section .text-link:hover,
+.footer a:hover {
+  color: #fff;
+}
+.features {
+  background: #fff;
+}
+.feature-number,
+.industry-top > span,
+.industry-arrow,
+.solution-number,
+.solution h3 button > svg {
+  color: #596975;
+}
+.why-note {
+  border-color: #d8b497;
+}
+.why-note strong {
+  color: #0b1f33;
+}
+.products-section,
+.solutions-section {
+  background: #f4f6f7;
+}
+.product-filters button {
+  background: #fff;
+  border-color: #dde2e5;
+  color: #53616d;
+  border-radius: 7px;
+}
+.product-filters button.selected {
+  background: #0b1f33;
+  border-color: #0b1f33;
+  color: #fff;
+}
+.product-filters button:hover {
+  background: #f5e9df;
+  border-color: #95552b;
+  color: #0b1f33;
+}
+.product-filters button.selected:hover {
+  background: #243c50;
+  color: #fff;
+}
+.product-filters button span {
+  background: #ffffff26;
+}
+.product-card,
+.industry-card,
+.contact-form-card {
+  background: #fff;
+  border-color: #dde2e5;
+  border-radius: 14px;
+  box-shadow: 0 5px 24px #0b1f3306;
+}
+.product-card:hover,
+.industry-card:hover {
+  background: #fff;
+  border-color: #c47a44;
+  box-shadow: 0 12px 30px #0b1f3312;
+}
+.product-image {
+  background: #f4f6f7;
+  border-bottom: 1px solid #dde2e5;
+}
+.product-code {
+  background: #fffffff2;
+  color: #34495a;
+  padding: 5px 7px;
+  border-radius: 4px;
+}
+.product-expand {
+  background: #0b1f33;
+  color: #fff;
+  border-color: #ffffff70;
+}
+.product-expand:hover {
+  background: #243c50;
+  color: #fff;
+}
+.product-info .product-category,
+.solution-body small {
+  color: #95552b;
+}
+.product-actions {
+  padding-block: 14px;
+}
+.product-actions :is(button, a) {
+  flex: 1 1 90px;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--navy);
+  border-radius: 7px;
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 700;
+}
+.product-actions a:last-child {
+  background: var(--copper);
+  border-color: var(--copper);
+  color: var(--navy);
+}
+.product-actions button:hover {
+  background: #243c50;
+  color: var(--white);
+}
+.product-actions a:last-child:hover {
+  background: #e0a77d;
+  border-color: #e0a77d;
+  color: var(--navy);
+}
+.solution,
+.solution:first-child {
+  border-color: #dde2e5;
+}
+.solution-visual {
+  border-radius: 12px;
+}
+.solution-visual svg {
+  color: #c47a44;
+}
+.quality-section {
+  background: #f4f6f7;
+}
+.quality-emblem {
+  background: radial-gradient(ellipse, #ecd4c2, transparent 70%);
+  border-color: #d8b497;
+}
+.quality-list li {
+  color: #34495a;
+}
+.cta-section {
+  background:
+    radial-gradient(ellipse at 90% 20%, #604532, transparent 65%), #0b1f33;
+}
+.cta-symbol {
+  color: #ffffff14;
+}
+.contact-placeholder,
+.form-note,
+.social-links > a,
+.social-links > span {
+  color: #53616d;
+}
+.contact-form-card {
+  background: #f4f6f7;
+}
+form label {
+  color: #34495a;
+}
+input,
+select,
+textarea {
+  color: #0b1f33;
+  background: #fff;
+  border-color: #c5cdd3;
+  border-radius: 7px;
+}
+select {
+  color-scheme: light;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #596975;
+}
+.enquiry-result {
+  background: #f5e9df;
+  border-color: #d8b497;
+  border-radius: 8px;
+}
+.footer .logo small,
+.footer-brand > p,
+.footer-tag,
+.footer-grid > div:not(.footer-brand) > a,
+.footer-bottom {
+  color: #c6cdd3;
+}
+.footer .logo-mark {
+  background: #ffffff0a;
+  border-color: #ffffff30;
+}
+.footer-bottom > span svg {
+  color: #c47a44;
+}
+.product-dialog {
+  background: #fff;
+  color: #0b1f33;
+  border-color: #dde2e5;
+  border-radius: 16px;
+  box-shadow: 0 24px 100px #0b1f334d;
+}
+.product-dialog::backdrop {
+  background: #0b1f33b8;
+  backdrop-filter: blur(5px);
+}
+.dialog-inner > img {
+  background: #f4f6f7;
+}
+.dialog-close {
+  background: #f4f6f7;
+  border-color: #dde2e5;
+}
+.dialog-copy dd {
+  color: #53616d;
+}
+@media (max-width: 1023px) {
+  .navigation {
+    background: #fff;
+    border-color: #dde2e5;
+    box-shadow: 0 16px 30px #0b1f3314;
+  }
+  .hero-shade {
+    background:
+      linear-gradient(90deg, #0b1f33 0%, #0b1f33ed 32%, #0b1f3373 85%),
+      linear-gradient(0deg, #0b1f33, transparent 30%);
+  }
+}
+@media (max-width: 767px) {
+  .nav-wrap {
+    gap: 10px;
+  }
+  .menu-toggle {
+    flex-shrink: 0;
+  }
+  .hero-shade {
+    background: linear-gradient(
+      180deg,
+      #0b1f33 0%,
+      #0b1f33 28%,
+      #0b1f33ed 43%,
+      #0b1f3373 64%,
+      #0b1f3326 78%,
+      #0b1f33 100%
+    );
+  }
+}
+@media (max-width: 374px) {
+  .header .logo {
+    font-size: 20px;
+    gap: 8px;
+  }
+  .header .logo small {
+    letter-spacing: 2px;
+  }
+}
+
+/* Copper accents retain readable contrast on light and dark surfaces. */
+.hero .button-gold:hover {
+  color: var(--navy);
+}
+.logo-mark,
+.feature-icon,
+.contact-card > span {
+  color: var(--copper-text);
+}
+.footer .logo-mark {
+  color: var(--copper);
+}
+.why-note {
+  border-color: var(--copper);
+}
+.solution-visual {
+  background: var(--navy);
+}
+.solution-visual::after {
+  background: linear-gradient(transparent, #0b1f33dd);
+}
+.status-dot {
+  background: var(--copper);
+}

@@ -1,39 +1,32 @@
 import { useEffect, useRef, useState } from "react";
 import { categories, products } from "../data";
 import type { Category, Product } from "../data";
+import { productOrderUrl } from "../site";
 import { Icon } from "./Icon";
 import { SectionHeading } from "./Sections";
 export function ProductCard({
   product,
   index,
   onDetails,
-  onEnquire,
 }: {
   product: Product;
   index: number;
   onDetails: (product: Product) => void;
-  onEnquire: (name: string) => void;
 }) {
   return (
     <article className="product-card">
       <div className="product-image">
         <span className="product-code">
-          TV / {String(index + 1).padStart(2, "0")}
+          ET / {String(index + 1).padStart(2, "0")}
         </span>
         <img
-          src={`/images/${product.id}.webp`}
-          alt={product.name}
+          src={product.image ?? `/images/${product.id}.webp`}
+          className={product.image ? "product-photo" : undefined}
+          alt={product.imageAlt ?? product.name}
           width="384"
           height="341"
           loading="lazy"
         />
-        <button
-          className="product-expand"
-          onClick={() => onDetails(product)}
-          aria-label={`View ${product.name} details`}
-        >
-          <Icon name="arrowUp" size={18} />
-        </button>
       </div>
       <div className="product-info">
         <p className="product-category">{product.category}</p>
@@ -41,14 +34,16 @@ export function ProductCard({
         <p>{product.description}</p>
         <div className="product-actions">
           <button onClick={() => onDetails(product)}>
-            View Details <Icon name="plus" size={15} />
+            Details
           </button>
-          <button
-            onClick={() => onEnquire(product.name)}
-            aria-label={`Enquire about ${product.name}`}
+          <a
+            href={productOrderUrl(product)}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Order Now: ${product.name}`}
           >
-            Enquire <Icon name="arrow" size={16} />
-          </button>
+            Order Now
+          </a>
         </div>
       </div>
     </article>
@@ -97,8 +92,9 @@ function ProductDialog({
             <Icon name="close" />
           </button>
           <img
-            src={`/images/${product.id}.webp`}
-            alt={product.name}
+            src={product.image ?? `/images/${product.id}.webp`}
+            className={product.image ? "product-photo" : undefined}
+            alt={product.imageAlt ?? product.name}
             width="384"
             height="341"
           />
@@ -106,16 +102,50 @@ function ProductDialog({
             <p className="eyebrow">PRODUCT OVERVIEW</p>
             <h2 id="product-title">{product.name}</h2>
             <p>{product.detail}</p>
+            <h3>Specifications</h3>
             <dl>
-              <dt>Material</dt>
-              <dd>{product.material}</dd>
-              <dt>Sizes & specifications</dt>
-              <dd>Confirmed against your project requirements</dd>
+              {(
+                product.specifications ?? [
+                  { label: "Product type", value: product.name },
+                  { label: "Category", value: product.category },
+                ]
+              ).map((spec) => (
+                <div key={spec.label}>
+                  <dt>{spec.label}</dt>
+                  <dd>{spec.value}</dd>
+                </div>
+              ))}
             </dl>
+            <h3>Main features</h3>
+            <ul className="product-features">
+              {(product.features ?? [product.description]).map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+            {product.source && (
+              <p className="small">
+                <a
+                  href={product.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Manufacturer product information
+                </a>
+              </p>
+            )}
             <p className="small">
               Illustrative product image. Final dimensions, availability and
               specifications are confirmed at quotation.
             </p>
+            <a
+              className="button button-gold"
+              href={productOrderUrl(product)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Order Now: ${product.name}`}
+            >
+              Order Now
+            </a>
             <button
               className="button button-gold"
               onClick={() => {
@@ -148,7 +178,7 @@ export function ProductGrid({
         <div className="section-title-row">
           <SectionHeading
             eyebrow="OUR PRODUCT RANGE"
-            title="Engineered for a stronger connection."
+            title="Earthing Products"
           />
           <p className="section-aside">
             From the electrode to the final connection.
@@ -170,7 +200,7 @@ export function ProductGrid({
                 onClick={() => setCategory(item)}
               >
                 {item}
-                {item === "All products" && <span>12</span>}
+                {item === "All products" && <span>{products.length}</span>}
               </button>
             ))}
           </div>
@@ -185,7 +215,6 @@ export function ProductGrid({
               product={product}
               index={products.indexOf(product)}
               onDetails={setSelected}
-              onEnquire={onEnquire}
             />
           ))}
         </div>
