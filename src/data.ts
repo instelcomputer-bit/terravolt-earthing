@@ -183,18 +183,18 @@ export const products: Product[] = [
   },
   {
     id: "solid-copper-earth-rod",
-    name: "Solid Copper Earth Rod",
+    name: "Pure Copper Earth Rod",
     category: "Rods & electrodes",
     image: "/images/solid-copper-earth-rod.webp",
-    description: "Solid copper rod for electrical earthing systems.",
+    description: "Pure copper rod for electrical earthing systems.",
     detail:
-      "A solid copper earth rod for grounding installations. Required length, diameter and connection accessories are selected to suit your project.",
+      "A pure copper earth rod for grounding installations. Required length, diameter and connection accessories are selected to suit your project.",
     specifications: [
-      { label: "Material", value: "Solid copper" },
+      { label: "Material", value: "Pure copper" },
       { label: "Product type", value: "Earth rod" },
     ],
     features: [
-      "Solid copper construction",
+      "Pure copper construction",
       "Grounding electrode for earthing systems",
     ],
   },
