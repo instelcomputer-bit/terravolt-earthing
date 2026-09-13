@@ -4,7 +4,7 @@ test("production SEO files and metadata are crawlable and consistent", async ({
   request,
   page,
 }) => {
-  const origin = "https://earthingtruss.com/";
+  const origin = "https://www.earthingtruss.com/";
   const sitemap = await request.get("/sitemap.xml");
   expect(sitemap.status()).toBe(200);
   expect(sitemap.headers()["content-type"]).toContain("xml");
@@ -26,6 +26,21 @@ test("production SEO files and metadata are crawlable and consistent", async ({
     "href",
     origin,
   );
+  await expect(page.locator('meta[property="og:url"]')).toHaveCount(1);
+  await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
+    "content",
+    origin,
+  );
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    "content",
+    "index, follow",
+  );
+  await expect(page.locator("title")).toHaveCount(1);
+  await expect(page.locator('meta[name="description"]')).toHaveCount(1);
+  expect(html).not.toContain("https://earthingtruss.com/");
+  await expect(
+    page.locator("main img:not([alt]), main img[alt='']"),
+  ).toHaveCount(0);
   const title = await page.title();
   const description = await page
     .locator('meta[name="description"]')
@@ -47,6 +62,18 @@ test("production SEO files and metadata are crawlable and consistent", async ({
     schema["@graph"].map((entry: { "@type": string }) => entry["@type"]),
   ).toEqual(["Organization", "WebSite", "WebPage"]);
   for (const entry of schema["@graph"]) expect(entry.url).toBe(origin);
+  for (const entry of schema["@graph"]) {
+    expect(entry["@id"]).toBe(`${origin}#${entry["@type"].toLowerCase()}`);
+    for (const key of ["publisher", "isPartOf", "about"]) {
+      if (entry[key]) {
+        expect(
+          schema["@graph"].some(
+            (node: { "@id": string }) => node["@id"] === entry[key]["@id"],
+          ),
+        ).toBe(true);
+      }
+    }
+  }
   expect(schema["@graph"][2].description).toBe(description);
   await expect(page.locator("h1")).toHaveCount(1);
 });

@@ -26,7 +26,7 @@ On Windows PowerShell with restricted execution policy, use `npm.cmd` instead of
 - `src/styles.css`: design tokens, responsive layouts, focus states and reduced-motion support.
 - `public/images/`: local optimized WebP hero and illustrative product imagery.
 - `public/fonts/`: local Manrope variable font and its license.
-- `vite.config.ts`: Vite configuration and optional production canonical/Open Graph URL injection.
+- `vite.config.ts`: Vite configuration; production SEO metadata is maintained in `index.html`.
 - `tests/site.spec.ts`: browser checks, assets, anchor destinations, overflow, interactions and WCAG scans.
 
 This is a single-page website using semantic section anchors (`#home`, `#about`, `#products`, `#industries`, `#solutions`, `#contact`). There are no database, authentication or certificate services in this new project. The original Vite scaffold and README are retained in the baseline commit.
@@ -38,7 +38,7 @@ This is a single-page website using semantic section anchors (`#home`, `#about`,
 3. Replace the visible demo-contact notice and footer launch notice once details are configured.
 4. The contact form deliberately does not transmit information. It validates required fields, prepares an enquiry and downloads a text file. Connect a real server-side form endpoint, configure delivery, add an appropriate privacy notice and test delivery before changing the UI to say “Send”. Never add private API credentials to frontend code.
 5. Verify product specifications, available materials and final product photographs. Current AI-generated images are illustrative; product dialogs state that explicitly. No certification, fixed resistance value, test result, customer count or warranty has been invented.
-6. Serve at `https://earthingtruss.com/`. Canonical, social metadata and Organization/WebSite/WebPage schema are in `index.html`; no `SITE_URL` variable is needed. Vite copies `public/sitemap.xml` and `public/robots.txt` to the build root. The sitemap contains only `/`: navigation sections and product dialogs are not separate pages. After deployment, verify both SEO files return HTTP 200 and submit the sitemap in Search Console. Confirm HTTP and www redirects in the hosting domain settings.
+6. Serve at `https://www.earthingtruss.com/`. Canonical, social metadata and Organization/WebSite/WebPage schema are in `index.html`; no `SITE_URL` variable is needed. Vite copies `public/sitemap.xml` and `public/robots.txt` to the build root. The sitemap contains only `/`: navigation sections and product dialogs are not separate pages. After deployment, verify both SEO files return HTTP 200 and submit the sitemap in Search Console. Confirm HTTP and www redirects in the hosting domain settings.
 7. Add Organization/LocalBusiness JSON-LD only after the real legal name, public URL, address and contact information are confirmed. No fabricated location or business identifiers are published.
 
 ## Checks

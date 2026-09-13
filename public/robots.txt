@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://earthingtruss.com/sitemap.xml
+Sitemap: https://www.earthingtruss.com/sitemap.xml
