@@ -37,7 +37,7 @@ export function Contact({
           <SectionHeading
             eyebrow="LET’S TALK"
             title="Contact Us"
-            text="Tell us what you’re building. Start with a product, a drawing or a simple question — and take the next step toward a safer system."
+            text="Planning an earthing system in India? Share your project location, product requirements and specifications to discuss suitable electrical grounding products."
           />
           <div className="contact-cards">
             {contactDetails.map(({ icon, title, value, href }) => (

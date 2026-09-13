@@ -126,7 +126,9 @@ test("product filtering, modal focus, enquiry and download", async ({
   expect(contents).toContain("Interested in: Copper Strip");
   expect(contents).toContain("Test Customer");
   await page
-    .getByRole("button", { name: "View GI Strip details", exact: true })
+    .locator(".product-card")
+    .filter({ has: page.getByRole("heading", { name: "GI Strip", exact: true }) })
+    .getByRole("button", { name: "Details", exact: true })
     .click();
   await page
     .getByRole("button", { name: "Enquire About This Product" })

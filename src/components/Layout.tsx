@@ -123,10 +123,10 @@ export function Footer() {
           </div>
           <div>
             <h3>Our products</h3>
-            <a href="#products">Copper bonded rods</a>
+            <a href="#products">Copper bonded earthing rods</a>
             <a href="#products">GI electrodes</a>
-            <a href="#products">Strips & conductors</a>
-            <a href="#products">Clamps & accessories</a>
+            <a href="#products">Earthing strips & conductors</a>
+            <a href="#products">Earthing clamps & accessories</a>
           </div>
           <div>
             <h3>Solutions</h3>

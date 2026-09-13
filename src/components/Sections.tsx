@@ -47,8 +47,8 @@ export function Hero() {
             <br className="desktop-break" /> <em>Safer Tomorrow</em>
           </h1>
           <p className="hero-description">
-            Reliable earthing products and solutions designed to protect people,
-            equipment and electrical infrastructure.
+            Earthing products and lightning protection equipment for electrical
+            grounding systems in industrial, commercial and residential projects.
           </p>
           <div className="button-row">
             <a className="button button-gold" href="#products">
@@ -139,11 +139,11 @@ export function WhyEarthing() {
         <div>
           <SectionHeading
             eyebrow="THE IMPORTANCE OF EARTHING"
-            title="Why Earthing?"
-            text="Every reliable electrical system needs a strong foundation. The right earthing solution helps protect what matters most — from the ground up."
+            title="Why an Earthing System Matters"
+            text="An electrical earthing system connects equipment to earth through electrodes, conductors and bonding connections. The right grounding system supports electrical safety."
           />
           <a href="#solutions" className="text-link">
-            Discover our solutions <Icon name="arrow" size={18} />
+            Explore grounding solutions <Icon name="arrow" size={18} />
           </a>
           <div className="why-note">
             <Icon name="ground" size={44} />
@@ -263,7 +263,7 @@ export function Solutions() {
           <SectionHeading
             eyebrow="COMPLETE PROTECTION"
             title="Right Earthing, Right Protection"
-            text="The right components. A coordinated approach. Explore grounding solutions for your application."
+            text="Explore grounding equipment and electrical earthing accessories for your application, with components selected to suit your earthing and lightning protection system."
           />
           <div className="solution-visual">
             <img

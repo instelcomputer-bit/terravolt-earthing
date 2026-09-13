@@ -26,22 +26,25 @@ export const categories: Category[] = [
 export const products: Product[] = [
   {
     id: "copper-rods",
+    imageAlt: "Copper bonded earthing rods",
     name: "Copper Bonded Rods",
     category: "Rods & electrodes",
-    description: "Grounding rods for your earthing installation.",
+    description: "Copper bonded earthing electrodes for grounding installations.",
     detail:
       "Copper bonded rods for electrical grounding systems. Share your soil conditions, required length and project specification so the appropriate rod can be selected.",
   },
   {
     id: "gi-electrodes",
+    imageAlt: "Galvanized iron earthing electrodes",
     name: "GI Electrode",
     category: "Rods & electrodes",
-    description: "A robust foundation for your earthing system.",
+    description: "Galvanized iron electrodes for electrical earthing systems.",
     detail:
       "Galvanized iron electrodes for project-specific earthing installations. Electrode dimensions and coating requirements should be selected to suit the site and design.",
   },
   {
     id: "spike-rods",
+    imageAlt: "Pointed earthing rods",
     name: "Spike Rod",
     category: "Rods & electrodes",
     description: "Pointed profiles for driven installations.",
@@ -50,6 +53,7 @@ export const products: Product[] = [
   },
   {
     id: "rod-clamp",
+    imageAlt: "Copper bonded earthing rod with connection clamp",
     name: "Copper Bonded Rod with Clamp",
     category: "Rods & electrodes",
     description: "A dependable electrode-to-conductor connection.",
@@ -58,14 +62,16 @@ export const products: Product[] = [
   },
   {
     id: "copper-strip",
+    imageAlt: "Copper earthing strip",
     name: "Copper Strip",
     category: "Strips & conductors",
-    description: "High-conductivity pathways for grounding.",
+    description: "Copper earthing strip for grounding and bonding networks.",
     detail:
       "Flat copper conductors for bonding and earthing networks. Width, thickness and jointing requirements are selected against the electrical design.",
   },
   {
     id: "gi-strip",
+    imageAlt: "Galvanized iron earthing strip",
     name: "GI Strip",
     category: "Strips & conductors",
     description: "Durable conductors for industrial networks.",
@@ -74,6 +80,7 @@ export const products: Product[] = [
   },
   {
     id: "earthing-clamps",
+    imageAlt: "Clamps for earthing conductor connections",
     name: "Earthing Clamp",
     category: "Clamps & accessories",
     description: "Secure connections. Consistent contact.",
@@ -82,6 +89,7 @@ export const products: Product[] = [
   },
   {
     id: "chemicals",
+    imageAlt: "Chemical earthing ground enhancement compound",
     name: "Chemical Earthing",
     category: "Clamps & accessories",
     description: "Ground enhancement for suitable soil conditions.",
@@ -90,14 +98,16 @@ export const products: Product[] = [
   },
   {
     id: "pit-chamber",
+    imageAlt: "Earth pit inspection chamber",
     name: "Earth Pit Chamber",
     category: "Clamps & accessories",
-    description: "Practical access for inspection and testing.",
+    description: "Earthing pit access for inspection and testing.",
     detail:
       "Inspection chambers help protect and provide access to earth termination points. Confirm opening dimensions and the required load rating for your installation.",
   },
   {
     id: "gi-clamps",
+    imageAlt: "Galvanized iron earthing clamps",
     name: "GI Clamp",
     category: "Clamps & accessories",
     description: "Strong fixings for compatible GI conductors.",
@@ -106,6 +116,7 @@ export const products: Product[] = [
   },
   {
     id: "connectors",
+    imageAlt: "Cable connectors and grounding lugs",
     name: "Connector & Lugs",
     category: "Clamps & accessories",
     description: "Clean terminations that complete the circuit.",
@@ -114,14 +125,16 @@ export const products: Product[] = [
   },
   {
     id: "accessories",
+    imageAlt: "Earthing connection accessories",
     name: "Earthing Accessories",
     category: "Clamps & accessories",
-    description: "The details that bring your system together.",
+    description: "Electrical earthing accessories for grounding assemblies.",
     detail:
       "Couplers, fasteners and flexible bonding accessories for complete grounding assemblies. Send your bill of materials to discuss compatible components.",
   },
   {
     id: "thunderstroke-protect-60",
+    imageAlt: "Remedies Thunderstroke Protect 60 ESE lightning terminal",
     name: "SS Remedies Thunderstroke Protect 60",
     category: "Lightning protection",
     image: "/images/thunderstroke-protect-60.webp",
@@ -147,7 +160,7 @@ export const products: Product[] = [
     name: "ESE Lightning Arrester Models — With Digital Meter",
     category: "Lightning protection",
     image: "/images/ese-lightning-arrester-models.webp",
-    imageAlt: "ESE Lightning Arrester Models - Multiple Lightning Protection Products",
+    imageAlt: "Five ESE lightning arrester models",
     description:
       "Five ESE lightning arrester models, available with digital meter.",
     detail:
@@ -183,6 +196,7 @@ export const products: Product[] = [
   },
   {
     id: "solid-copper-earth-rod",
+    imageAlt: "Pure copper earthing electrode",
     name: "Pure Copper Electrode",
     category: "Rods & electrodes",
     image: "/images/pure-copper-electrode.png",
